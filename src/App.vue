@@ -27,7 +27,7 @@ import ButtonChild from './components/ButtonChild.vue';
     <div v-show="alterando">
       <label>Preço</label>
       <input type="number" v-model="preco">
-      <ButtonChild>Salvar</ButtonChild>
+      <ButtonChild @clique="corrigirPreco(.)">Salvar</ButtonChild>
 
     </div>
   </div>
