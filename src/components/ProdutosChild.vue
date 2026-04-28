@@ -2,13 +2,14 @@
 import ButtonChild from './ButtonChild.vue';
 
 defineProps(['id', 'nome', 'preco', 'categoria'])
+defineEmits(['corrigirpreco'])
 
 </script>
 
 <template>
   <li>
     ID: {{ id }} - {{ nome }} -R${{ preco }}, ({{ categoria }})
-    <ButtonChild @clique="teste"> Corrigir preço</ButtonChild>
+    <ButtonChild @clique="$emit('corrigirpreco', id)"> Corrigir preço</ButtonChild>
   </li>
 
 </template>
